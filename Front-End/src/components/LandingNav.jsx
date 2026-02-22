@@ -4,7 +4,6 @@ const LandingNav = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // Helper function to check if a link is active
   const isActive = (path) => location.pathname === path;
 
   const handleHomeClick = () => {
@@ -15,9 +14,7 @@ const LandingNav = () => {
     }
   };
 
-  // Common style for the "Active" pill
   const activeStyle = "bg-pink-200 text-pink-800 px-4 py-1 rounded-full font-medium transition";
-  // Common style for the "Inactive" link
   const inactiveStyle = "text-gray-600 hover:text-pink-600 transition font-medium px-4 py-1";
 
   return (

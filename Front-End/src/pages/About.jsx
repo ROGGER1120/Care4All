@@ -3,13 +3,12 @@ import LandingNav from '../components/LandingNav';
 
 const About = () => {
   return (
-    <> {/* Wrap in a fragment to allow multiple top-level elements */}
+    <> 
       <LandingNav />
       
       <div className="bg-white">
-        {/* Header Section */}
         <section className="bg-gray-900 py-20">
-          <div className="max-w-6xl mx-auto px-10 text-center pt-10"> {/* Added pt-10 to give space if Nav is fixed */}
+          <div className="max-w-6xl mx-auto px-10 text-center pt-10">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">About Our Mission</h1>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -17,7 +16,7 @@ const About = () => {
           </div>
         </section>
 
-        {/* Who We Are Section */}
+
         <section className="py-16 max-w-6xl mx-auto px-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -39,29 +38,25 @@ const About = () => {
           </div>
         </section>
 
-        {/* Stats Section */}
-        <section className="bg-pink-600 py-16 text-white">
-          <div className="max-w-6xl mx-auto px-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold">10K+</div>
-              <div className="text-pink-100 uppercase text-sm mt-2">Donors</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold">50+</div>
-              <div className="text-pink-100 uppercase text-sm mt-2">Projects</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold">1M</div>
-              <div className="text-pink-100 uppercase text-sm mt-2">Lives Impacted</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold">15</div>
-              <div className="text-pink-100 uppercase text-sm mt-2">Countries</div>
-            </div>
-          </div>
-        </section>
 
-        {/* Team Section */}
+<section className="bg-[#eb008b] py-16 text-white w-full">
+  <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-3 gap-12 text-center font-poppins">
+    <div>
+      <div className="text-4xl md:text-5xl font-black">10</div>
+      <div className="text-pink-100 uppercase text-xs tracking-widest font-bold mt-2">Donors</div>
+    </div>
+    <div>
+      <div className="text-4xl md:text-5xl font-black">0</div>
+      <div className="text-pink-100 uppercase text-xs tracking-widest font-bold mt-2">Lives Impacted</div>
+    </div>
+    <div>
+      <div className="text-4xl md:text-5xl font-black">0</div>
+      <div className="text-pink-100 uppercase text-xs tracking-widest font-bold mt-2">Countries</div>
+    </div>
+  </div>
+</section>
+
+
         <section className="py-20 max-w-6xl mx-auto px-10">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Our Leadership</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
