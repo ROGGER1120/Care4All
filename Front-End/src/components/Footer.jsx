@@ -31,7 +31,7 @@ const Footer = () => {
                 <Mail size={16} className="text-[#eb008b]" /> lorem@ipsum.com
               </li>
               <li className="flex items-center justify-center md:justify-start gap-3">
-                <Phone size={16} className="text-[#eb008b]" /> +1 (555) 123-4567
+                <Phone size={16} className="text-[#eb008b]" /> +91 9876543210
               </li>
             </ul>
           </div>

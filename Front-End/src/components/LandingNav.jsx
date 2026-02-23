@@ -23,7 +23,7 @@ const LandingNav = () => {
         
         <Link
           to="/"
-          className="text-2xl font-bold text-pink-600 cursor-pointer"
+          className="text-3xl font-bold text-pink-600 cursor-pointer"
         >
           Care4All
         </Link>
@@ -43,12 +43,12 @@ const LandingNav = () => {
             About Us
           </Link>
 
-          <a 
-            href="#contact" 
-            className="text-gray-600 hover:text-pink-600 transition font-medium px-4 py-1"
+          <Link 
+            to="/contact" 
+            className={isActive("/contact") ? activeStyle : inactiveStyle}
           >
             Contact Us
-          </a>
+          </Link>
 
           <a href="/login" className="bg-pink-600 hover:bg-pink-700 text-white px-6 py-2 rounded-full font-semibold transition whitespace-nowrap ml-4">
             DONATE NOW

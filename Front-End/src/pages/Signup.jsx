@@ -1,8 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import LandingNav from '../components/LandingNav';
 
 const Signup = () => {
+  const location = useLocation();
   const [userType, setUserType] = useState('donor');
+
+  // On mount, check if location.state has userType
+  useEffect(() => {
+    if (location.state?.userType) {
+      setUserType(location.state.userType);
+    }
+  }, [location.state]);
 
   return (
     <div className="min-h-screen bg-gray-50 font-poppins">
