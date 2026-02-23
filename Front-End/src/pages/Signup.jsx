@@ -1,0 +1,65 @@
+import React, { useState } from 'react';
+import LandingNav from '../components/LandingNav';
+
+const Signup = () => {
+  const [userType, setUserType] = useState('donor');
+
+  return (
+    <div className="min-h-screen bg-gray-50 font-poppins">
+      <LandingNav />
+      <div className="flex items-center justify-center pt-24 pb-12 px-6">
+        <div className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-gray-100 p-8">
+          <h1 className="text-2xl font-bold text-gray-800 text-center mb-6">Create Account</h1>
+
+          <div className="flex bg-gray-100 p-1 rounded-full mb-8">
+            {['donor', 'ngo'].map((type) => (
+              <button 
+                key={type}
+                onClick={() => setUserType(type)}
+                className={`flex-1 py-2 rounded-full text-xs font-bold transition uppercase ${
+                  userType === type ? 'bg-[#eb008b] text-white' : 'text-gray-500'
+                }`}
+              >
+                {type}
+              </button>
+            ))}
+          </div>
+
+          <form className="space-y-4">
+            <div className="text-left">
+              <label className="block text-xs font-bold text-gray-400 uppercase mb-1 ml-1">
+                {userType === 'donor' ? 'Full Name' : 'Organization Name'}
+              </label>
+              <input 
+                type="text" 
+                placeholder={userType === 'donor' ? "John Doe" : "NGO Foundation"}
+                className="w-full px-5 py-3 rounded-2xl bg-gray-50 border border-gray-100 focus:outline-none focus:border-[#eb008b]"
+                required
+              />
+            </div>
+
+            <div className="text-left">
+              <label className="block text-xs font-bold text-gray-400 uppercase mb-1 ml-1">Email Address</label>
+              <input type="email" placeholder="email@example.com" className="w-full px-5 py-3 rounded-2xl bg-gray-50 border border-gray-100 focus:outline-none focus:border-[#eb008b]" required />
+            </div>
+
+            <div className="text-left">
+              <label className="block text-xs font-bold text-gray-400 uppercase mb-1 ml-1">Password</label>
+              <input type="password" placeholder="••••••••" className="w-full px-5 py-3 rounded-2xl bg-gray-50 border border-gray-100 focus:outline-none focus:border-[#eb008b]" required />
+            </div>
+
+            <button className="w-full bg-[#eb008b] hover:bg-[#d0007c] text-white py-4 rounded-2xl font-bold text-xs shadow-lg mt-4 uppercase">
+              Register as {userType}
+            </button>
+          </form>
+
+          <div className="mt-8 text-center text-sm text-gray-500">
+            Already have an account? <a href="/login" className="text-[#eb008b] font-bold hover:underline">Login</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Signup;
