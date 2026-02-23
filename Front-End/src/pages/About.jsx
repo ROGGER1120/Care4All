@@ -46,11 +46,11 @@ const About = () => {
       <div className="text-pink-100 uppercase text-xs tracking-widest font-bold mt-2">Donors</div>
     </div>
     <div>
-      <div className="text-4xl md:text-5xl font-black">0</div>
+      <div className="text-4xl md:text-5xl font-black">20</div>
       <div className="text-pink-100 uppercase text-xs tracking-widest font-bold mt-2">Lives Impacted</div>
     </div>
     <div>
-      <div className="text-4xl md:text-5xl font-black">0</div>
+      <div className="text-4xl md:text-5xl font-black">30</div>
       <div className="text-pink-100 uppercase text-xs tracking-widest font-bold mt-2">Countries</div>
     </div>
   </div>

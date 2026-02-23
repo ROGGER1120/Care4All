@@ -1,10 +1,17 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const PartnerBanner = () => {
+  const navigate = useNavigate();
+
+  const handlePartnerClick = () => {
+    // Navigate to signup page and pass state
+    navigate('/signup', { state: { userType: 'ngo' } });
+  };
+
   return (
     <div className="bg-white w-full py-10">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
-        
         <div className="border border-gray-100 shadow-sm rounded-3xl p-8 md:p-14 flex flex-col md:flex-row items-center justify-between gap-10">
           
           <div className="text-left max-w-3xl">
@@ -14,7 +21,10 @@ const PartnerBanner = () => {
             </h2>
           </div>
 
-          <button className="bg-[#eb008b] hover:bg-[#d0007c] text-white px-10 py-4 rounded-full font-bold text-xs tracking-widest transition-all whitespace-nowrap uppercase">
+          <button 
+            onClick={handlePartnerClick}
+            className="bg-[#eb008b] hover:bg-[#d0007c] text-white px-10 py-4 rounded-full font-bold text-xs tracking-widest transition-all whitespace-nowrap uppercase"
+          >
             PARTNER WITH US
           </button>
 

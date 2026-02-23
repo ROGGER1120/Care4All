@@ -1,19 +1,18 @@
-import heroImg from "../assets/hero.png"
+import { Link } from "react-router-dom";
+import heroImg from "../assets/hero.png";
 
 const LandingHero = () => {
   return (
     <section className="relative w-full h-screen">
-      
-    <div
-  className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-  style={{ backgroundImage: `url(${heroImg})` }}
-></div>
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroImg})` }}
+      ></div>
 
       <div className="absolute inset-0 bg-black/60"></div>
 
       <div className="relative z-10 flex items-center h-full">
         <div className="max-w-6xl px-10 md:px-20 text-white">
-          
           <h1 className="text-4xl md:text-6xl font-bold leading-tight text-left">
             Together We Can Make <br />
             a Difference
@@ -24,14 +23,16 @@ const LandingHero = () => {
             us provide essential services to the communities in need.
           </p>
 
-          <button className="mt-8 bg-pink-600 hover:bg-pink-700 px-8 py-3 rounded-full font-semibold transition">
+          <Link
+            to="/login"
+            className="mt-8 inline-block bg-pink-600 hover:bg-pink-700 px-8 py-3 rounded-full font-semibold transition"
+          >
             START DONATING
-          </button>
-
+          </Link>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default LandingHero
+export default LandingHero;
