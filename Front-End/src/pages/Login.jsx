@@ -1,5 +1,10 @@
+// Login page component
+// Presents a toggleable form for donors and NGOs.  
+// Tracks userType (donor/ngo) and navigates to the appropriate
+// dashboard upon submission.  
+// Tailwind classes ensure the form is centered and responsive.
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [userType, setUserType] = useState('donor'); 
@@ -8,6 +13,7 @@ const Login = () => {
     password: '',
     orgId: '',
   });
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -21,6 +27,15 @@ const Login = () => {
     
     console.log(`Logging in as ${userType}:`, loginData);
   };
+
+  const handleNavigate = () => {
+    // navigate to the appropriate dashboard after successful login
+    if (userType === 'donor') {
+      navigate('/donor');
+    } else {
+      navigate('/ngohome');
+    }
+  }
 
   return (
     <div className="min-h-screen bg-gray-50 font-poppins">  
@@ -100,7 +115,8 @@ const Login = () => {
                 </a>
               </div>
 
-              <button type="submit" className="w-full bg-[#eb008b] hover:bg-[#d0007c] text-white py-4 rounded-2xl font-bold text-xs transition transform hover:scale-[1.02] shadow-lg mt-2 uppercase">
+              <button type="submit" className="w-full bg-[#eb008b] hover:bg-[#d0007c] text-white py-4 rounded-2xl font-bold text-xs transition transform hover:scale-[1.02] shadow-lg mt-2 uppercase"
+              onClick={handleNavigate}>
                 Login as {userType}
               </button>
             </form>

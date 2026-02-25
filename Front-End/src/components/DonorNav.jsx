@@ -1,3 +1,8 @@
+// Navigation bar used on donor-facing pages.
+// Provides links to donor home, needs, history, events, and NGO
+// directory.  
+// Uses responsive classes to hide the link list on smaller screens
+// (could be extended to add a hamburger menu).  
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { 
