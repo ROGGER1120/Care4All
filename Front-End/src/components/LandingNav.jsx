@@ -18,8 +18,8 @@ const LandingNav = () => {
   const inactiveStyle = "text-gray-600 hover:text-pink-600 transition font-medium px-4 py-1";
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-gray-100 shadow-md z-50 font-poppins">
-      <div className="w-full px-10 md:px-20 py-4 flex items-center justify-between">
+    <nav className="fixed top-0 left-0 w-full bg-gray-100 shadow-md z-50 font-poppins backdrop-blur-sm">
+      <div className="w-full px-10 md:px-20 py-4 flex items-center justify-between ">
         
         <Link
           to="/"

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import LandingNav from '../components/LandingNav';
+import { Link } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
 
 const Signup = () => {
   const location = useLocation();
@@ -15,7 +17,17 @@ const Signup = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 font-poppins">
-      <LandingNav />
+      <nav className="fixed top-0 left-0 w-full bg-gray-100 shadow-md z-50 font-poppins backdrop-blur-sm">
+      <div className="w-full px-10 md:px-20 py-4 flex items-center justify-between ">
+        
+        <Link
+          to="/"
+          className="text-3xl font-bold text-pink-600 cursor-pointer"
+        >
+          Care4All
+        </Link>
+        </div>
+      </nav>
       <div className="flex items-center justify-center pt-24 pb-12 px-6">
         <div className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-gray-100 p-8">
           <h1 className="text-2xl font-bold text-gray-800 text-center mb-6">Create Account</h1>
@@ -60,6 +72,11 @@ const Signup = () => {
             <button className="w-full bg-[#eb008b] hover:bg-[#d0007c] text-white py-4 rounded-2xl font-bold text-xs shadow-lg mt-4 uppercase">
               Register as {userType}
             </button>
+            <div className="flex items-center justify-center mt-4 text-sm text-gray-500 cursor-pointer hover:text-gray-700 transition">
+              <Link
+              to="/"><ArrowLeft /></Link>
+            </div>
+
           </form>
 
           <div className="mt-8 text-center text-sm text-gray-500">

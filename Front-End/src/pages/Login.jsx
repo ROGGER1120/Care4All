@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import LandingNav from '../components/LandingNav';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [userType, setUserType] = useState('donor'); 
@@ -23,8 +23,18 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 font-poppins">
-      <LandingNav />
+    <div className="min-h-screen bg-gray-50 font-poppins">  
+    <nav className="fixed top-0 left-0 w-full bg-gray-100 shadow-md z-50 font-poppins backdrop-blur-sm">
+      <div className="w-full px-10 md:px-20 py-4 flex items-center justify-between ">
+        
+        <Link
+          to="/"
+          className="text-3xl font-bold text-pink-600 cursor-pointer"
+        >
+          Care4All
+        </Link>
+        </div>
+      </nav>
       <div className="flex items-center justify-center pt-32 pb-12 px-6">
         <div className="bg-white w-full max-w-md rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
           <div className="p-8 text-center">
