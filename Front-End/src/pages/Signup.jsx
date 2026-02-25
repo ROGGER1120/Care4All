@@ -1,3 +1,8 @@
+// Signup page component
+// Handles registration for both donors and NGOs.  
+// Uses `location.state` to pre‑select userType when redirected.
+// Form fields adapt based on type and basic responsiveness is
+// provided with Tailwind container and spacing utilities.
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import LandingNav from '../components/LandingNav';
