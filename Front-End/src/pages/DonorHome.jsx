@@ -21,7 +21,7 @@ const DonorHome = () => {
       <div className="h-16 lg:h-17" />
 
       {/* HERO — spacer div above handles navbar clearance */}
-      <section className="pt-10 pb-10 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-pink-50 to-white">
+      <section className="pt-10 pb-10 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-pink-50 to-white">
         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-12 text-left">
           <div className="flex-1">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
@@ -42,7 +42,7 @@ const DonorHome = () => {
               <img
                 src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070&auto=format&fit=crop"
                 alt="Children smiling"
-                className="relative rounded-3xl shadow-2xl w-full max-h-[340px] h-auto object-cover"
+                className="relative rounded-3xl shadow-2xl w-full max-h-85 h-auto object-cover"
               />
             </div>
           </div>
