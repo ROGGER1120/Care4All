@@ -1,3 +1,7 @@
+// Public landing/home page
+// Composes various presentational components to build the marketing
+// homepage. Each component is responsible for its own responsive
+// styling; the container is fluid by default.
 import Footer from "../components/Footer"
 import HowItWorks from "../components/HowItWorks"
 import ImpactBanners from "../components/ImpactBanners"
