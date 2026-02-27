@@ -35,7 +35,7 @@ const DonorNav = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 h-20 bg-white/90 backdrop-blur-md border-b border-gray-100 z-[60] px-6 md:px-12 flex items-center justify-between font-poppins">
+      <nav className="fixed top-0 left-0 right-0 h-20 bg-white/90 backdrop-blur-md border-b border-gray-100 z-60 px-6 md:px-12 flex items-center justify-between font-poppins">
         
         {/* Logo */}
         <div 
@@ -106,13 +106,13 @@ const DonorNav = () => {
       {/* Mobile Sidebar Overlay */}
       {isMobileMenuOpen && (
         <div 
-          className="fixed inset-0 bg-black/20 backdrop-blur-sm z-[70] lg:hidden"
+          className="fixed inset-0 bg-black/20 backdrop-blur-sm z-70 lg:hidden"
           onClick={() => setIsMobileMenuOpen(false)}
         />
       )}
 
       {/* Mobile Sidebar Menu */}
-      <div className={`fixed top-0 right-0 h-full w-[80%] max-w-xs bg-white z-[80] shadow-2xl transform transition-transform duration-300 ease-in-out lg:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+      <div className={`fixed top-0 right-0 h-full w-[80%] max-w-xs bg-white z-80 shadow-2xl transform transition-transform duration-300 ease-in-out lg:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="p-8 flex flex-col h-full">
           <div className="flex items-center justify-between mb-10">
             <span className="text-xl font-black text-[#eb008b]">Menu</span>
