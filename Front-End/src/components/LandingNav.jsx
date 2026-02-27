@@ -40,7 +40,7 @@ const LandingNav = () => {
           {/* Logo */}
           <Link
             to="/"
-            className="text-2xl font-extrabold text-[#eb008b] cursor-pointer shrink-0"
+            className="text-3xl font-extrabold text-[#eb008b] cursor-pointer shrink-0"
             onClick={() => setMenuOpen(false)}
           >
             Care4All
@@ -90,7 +90,6 @@ const LandingNav = () => {
         </div>
       </div>
 
-      {/* Breadcrumb — always below the main bar, only on mobile, only when not on root */}
       {pathSegments.length > 0 && (
         <div className="md:hidden bg-pink-50 border-b border-pink-100 px-4 py-1.5 text-xs text-gray-500 flex items-center gap-1">
           {pathSegments.map((seg, idx) => (
