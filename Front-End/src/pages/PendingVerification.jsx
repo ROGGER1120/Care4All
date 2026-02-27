@@ -6,14 +6,19 @@ const PendingVerification = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-white font-poppins">
-      {/* Simple Topbar - No extra links */}
-      <Topbar />
+    /* h-screen and overflow-hidden prevent any scrolling */
+    <div className="h-screen w-full bg-white font-poppins overflow-hidden flex flex-col">
+      
+      {/* Fixed Topbar height handled by flex-none */}
+      <div className="flex-none">
+        <Topbar />
+      </div>
 
-      <div className="flex flex-col items-center justify-center min-h-screen px-6">
+      {/* Main content area takes up remaining space and centers items */}
+      <main className="flex-grow flex items-center justify-center px-6">
         <div className="w-full max-w-[440px] text-center">
           
-          {/* Subtle Icon Circle */}
+          {/* Icon Circle */}
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-pink-50 mb-8">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="text-[#eb008b]">
               <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -39,15 +44,15 @@ const PendingVerification = () => {
             </button>
             
             <button 
-              onClick={() => console.log('logout')} 
-              className="w-full py-2 text-gray-400 text-xs font-bold hover:text-gray-900 transition-colors uppercase tracking-widest"
+              onClick={() => navigate('/login')} 
+              className="w-full py-2 text-gray-400 text-xs font-bold hover:text-gray-900 transition-colors uppercase tracking-widest cursor-pointer"
             >
               Sign Out
             </button>
           </div>
           
         </div>
-      </div>
+      </main>
     </div>
   );
 };
