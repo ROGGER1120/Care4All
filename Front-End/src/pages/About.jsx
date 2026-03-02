@@ -1,5 +1,6 @@
 import React from 'react';
 import LandingNav from '../components/LandingNav';
+import Footer from '../components/Footer';
 
 const About = () => {
   return (
@@ -40,7 +41,7 @@ const About = () => {
 
 
 <section className="bg-[#eb008b] py-16 text-white w-full">
-  <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-3 gap-12 text-center font-poppins">
+  <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 text-center font-poppins">
     <div>
       <div className="text-4xl md:text-5xl font-black">10</div>
       <div className="text-pink-100 uppercase text-xs tracking-widest font-bold mt-2">Donors</div>
@@ -70,11 +71,13 @@ const About = () => {
                 <p className="mt-3 text-gray-500 text-sm">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
                 </p>
+
               </div>
             ))}
           </div>
         </section>
       </div>
+      <Footer />
     </>
   );
 };

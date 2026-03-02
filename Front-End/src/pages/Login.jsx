@@ -11,8 +11,8 @@ const Login = () => {
   return (
     <div className="h-screen w-full bg-gray-50 font-poppins overflow-hidden flex flex-col">
       <AuthNav />
-      <div className="flex-grow flex items-center justify-center px-6">
-        <div className="bg-white w-full max-w-md rounded-[2rem] shadow-xl border border-gray-100 p-10">
+      <div className="grow flex items-center justify-center px-6">
+        <div className="bg-white w-full max-w-md rounded-4xl shadow-xl border border-gray-100 p-10">
           <div className="text-center mb-10">
             <h1 className="text-2xl font-bold text-gray-800 mb-2">Welcome Back</h1>
             <p className="text-gray-500 text-sm">Please enter your details to sign in</p>
@@ -20,7 +20,7 @@ const Login = () => {
 
           <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
             <div className="text-left">
-              <label className="block text-xs font-bold text-gray-400 uppercase mb-2 ml-1">Email Address</label>
+              <label className="block text-xs font-bold text-gray-400 uppercase mb-2 ml-1">Email</label>
               <input 
                 name="email" type="email" placeholder="name@example.com"
                 className="w-full px-5 py-3.5 rounded-2xl bg-gray-50 border border-gray-100 focus:outline-none focus:border-[#eb008b] transition"

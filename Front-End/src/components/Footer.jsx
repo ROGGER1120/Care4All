@@ -10,17 +10,17 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-1">
             <h2 className="text-2xl font-bold mb-4 tracking-tight">Care4All</h2>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+              Every donation creates hope by connecting kind hearts to real needs.We ensure food, education, and essentials reach those who need them most.
+              </p>
           </div>
 
           <div>
-            <h4 className="font-bold mb-6 text-sm uppercase tracking-widest text-gray-300">Lorem Ipsum</h4>
+            <h4 className="font-bold mb-6 text-sm uppercase tracking-widest text-gray-300">Quick Links</h4>
             <ul className="space-y-4 text-sm text-gray-400">
-              <li><a href="#" className="hover:text-[#eb008b] transition">Consectetur Elit</a></li>
-              <li><a href="#" className="hover:text-[#eb008b] transition">Magna Aliqua</a></li>
-              <li><a href="#" className="hover:text-[#eb008b] transition">Tempor Incididunt</a></li>
-              <li><a href="#" className="hover:text-[#eb008b] transition">Vehicula Ipsum</a></li>
+              <li><a href="#" className="hover:text-[#eb008b] transition">Home</a></li>
+              <li><a href="contact" className="hover:text-[#eb008b] transition">Contact Us</a></li>
+              <li><a href="login" className="hover:text-[#eb008b] transition">Login</a></li>
+              <li><a href="signup" className="hover:text-[#eb008b] transition">Register</a></li>
             </ul>
           </div>
 
@@ -28,7 +28,7 @@ const Footer = () => {
             <h4 className="font-bold mb-6 text-sm uppercase tracking-widest text-gray-300">Contact Us</h4>
             <ul className="space-y-4 text-sm text-gray-400">
               <li className="flex items-center justify-center md:justify-start gap-3">
-                <Mail size={16} className="text-[#eb008b]" /> lorem@ipsum.com
+                <Mail size={16} className="text-[#eb008b]" /> Care4All@gmail.com
               </li>
               <li className="flex items-center justify-center md:justify-start gap-3">
                 <Phone size={16} className="text-[#eb008b]" /> +91 9876543210
