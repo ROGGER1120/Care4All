@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import LandingNav from '../components/LandingNav';
 
 const ContactUsPage = () => {
@@ -14,9 +15,19 @@ const ContactUsPage = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const [showPopup, setShowPopup] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form Submission:', formData);
+    setShowPopup(true);
+  };
+
+  const navigate = useNavigate();
+
+  const handleClose = () => {
+    setShowPopup(false);
+    // navigate home after closing popup
+    navigate('/');
   };
 
   return (
@@ -65,7 +76,7 @@ const ContactUsPage = () => {
                   />
                 </div>
                 <div className="text-left">
-                  <label className="block text-xs font-bold text-gray-400 uppercase mb-1 ml-1">Email Address</label>
+                  <label className="block text-xs font-bold text-gray-400 uppercase mb-1 ml-1">Email</label>
                   <input 
                     name="email"
                     type="email" 
@@ -111,6 +122,21 @@ const ContactUsPage = () => {
           </div>
         </div>
       </div>
+
+      {showPopup && (
+        <div className="fixed inset-0 flex items-center justify-center backdrop-blur-sm bg-black/30 z-50">
+          <div className="bg-white rounded-xl p-8 shadow-lg max-w-sm text-center">
+            <h2 className="text-2xl font-bold mb-4">Thank you!</h2>
+            <p className="mb-6">Your message has been sent successfully.</p>
+            <button
+              onClick={handleClose}
+              className="bg-[#eb008b] hover:bg-[#d0007c] text-white py-2 px-4 rounded-2xl font-bold"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

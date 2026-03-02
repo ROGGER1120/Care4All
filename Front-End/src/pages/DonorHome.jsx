@@ -17,11 +17,11 @@ const DonorHome = () => {
       {/* Navbar Spacer */}
       <div className="h-20 flex-none" />
 
-      <main className="flex-grow">
+      <main className="grow">
         
         {/* HERO SECTION - Wider Max Width */}
-        <section className="py-12 md:py-20 px-6 sm:px-10 lg:px-16 bg-gradient-to-b from-pink-50 to-white">
-          <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+        <section className="py-12 md:py-20 px-6 sm:px-10 lg:px-16 bg-linear-to-b from-pink-50 to-white">
+          <div className="max-w-360 mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
             
             <div className="flex-1 text-center lg:text-left">
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 leading-[1.1] mb-8 tracking-tighter">
@@ -54,7 +54,7 @@ const DonorHome = () => {
 
         {/* URGENT NEEDS - Responsive Grid */}
         <section className="py-20 px-6 sm:px-10 lg:px-16">
-          <div className="max-w-[1440px] mx-auto">
+            <div className="max-w-360 mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-center md:items-end gap-6 mb-12">
               <div className="text-center md:text-left">
                 <h2 className="text-3xl md:text-4xl font-black text-gray-900 tracking-tight">Urgent Needs Near You</h2>
@@ -76,7 +76,7 @@ const DonorHome = () => {
 
         {/* ENGAGEMENT HUB - Expansive Layout */}
         <section className="py-24 px-6 sm:px-10 lg:px-16 bg-gray-50/50">
-          <div className="max-w-[1440px] mx-auto">
+            <div className="max-w-360 mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-black text-gray-900 mb-4 tracking-tight">Engagement Hub</h2>
               <p className="text-gray-500 text-lg max-w-2xl mx-auto">
@@ -130,7 +130,7 @@ const UrgentCard = ({ title, ngo, progress, tag }) => (
       </span>
       <Heart size={24} className="text-gray-200 group-hover:text-[#eb008b] transition-colors cursor-pointer fill-transparent group-hover:fill-pink-50" />
     </div>
-    <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 leading-tight flex-grow">{title}</h3>
+    <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 leading-tight grow">{title}</h3>
     <p className="text-sm text-gray-400 mb-8 font-medium italic tracking-wide">by {ngo}</p>
 
     <div className="w-full bg-gray-50 rounded-full h-3 mb-5 overflow-hidden">

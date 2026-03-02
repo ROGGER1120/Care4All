@@ -15,6 +15,10 @@ import NgoDirectory from "./pages/NgoDirectory"
 import DonorEvents from "./pages/DonorEvents"
 import DonorProfile from "./pages/DonorProfile"
 import AdminDashboard from "./pages/AdminDashboard"
+import AdminVerify from "./pages/AdminVerify"
+import AdminUsers from "./pages/AdminUsers"
+import AdminSupport from "./pages/AdminSupport"
+import AdminSettings from "./pages/AdminSettings"
 import PendingVerification from "./pages/PendingVerification"
 
 function App() {
@@ -35,7 +39,11 @@ function App() {
       <Route path="/ngodirectory" element={<NgoDirectory/>}/>
       <Route path="/donorevents" element={<DonorEvents/>}/>
       <Route path="/donorprofile" element={<DonorProfile/>}/>
-      <Route path="/admindashboard" element={<AdminDashboard/>}/>
+      <Route path="/admin" element={<AdminDashboard/>}/>
+      <Route path="/admin/verify" element={<AdminVerify/>}/>
+      <Route path="/admin/users" element={<AdminUsers/>}/>
+      <Route path="/admin/support" element={<AdminSupport/>}/>
+      <Route path="/admin/settings" element={<AdminSettings/>}/>
       <Route path="/pending" element={<PendingVerification/>}/>
     </Routes>
   )
